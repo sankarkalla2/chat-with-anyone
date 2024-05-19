@@ -11,7 +11,7 @@ import CreateChatButton from "./create-chat";
 const Header = async () => {
   const session = await auth();
   return (
-    <header className="sticky top-0 dark:bg-gray-900">
+    <header className="sticky top-0 dark:bg-gray-900 z-50">
       <nav className="flex max-w-7xl items-center mx-auto p-3 pl-2">
         <Logo />
         <div className="flex-1 flex items-center justify-end space-x-4">
