@@ -11,6 +11,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Badge } from "@/components/ui/badge";
 
 const Pricing = () => {
   return (
@@ -36,12 +37,10 @@ const Pricing = () => {
             <TabsContent value="account" className="mt-10">
               <div>
                 {pricingCards.map((card) => (
-                  <Card>
+                  <Card key={card.name}>
                     <CardHeader>
                       <CardTitle>
-                        <Button variant={"premium"} size="sm">
-                          {card.name}
-                        </Button>
+                        <Badge variant={"premium"}>{card.name}</Badge>
                       </CardTitle>
                       <CardDescription>{card.description}</CardDescription>
                     </CardHeader>
